@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      <Navbar />
 
       <div className="container my-5 text-center">
         <h1>Welcome to Resolute</h1>

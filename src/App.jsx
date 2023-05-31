@@ -5,10 +5,12 @@ import Graphs from "./component/Graphs";
 import Contact from "./component/Contact";
 import LoginOrSignout from "./loginPage/LoginOrSignout";
 import { Routes, Route } from "react-router-dom";
+import Navbar from './Navbar';
 
 const App = () => {
   return (
     <div className="app-container">
+       <Navbar />
       <LandingPage />
       <Routes>
         <Route path="/newupdate" element={<NewUpdate />} />
