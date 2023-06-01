@@ -37,17 +37,12 @@ const LandingPage = () => {
             </li>
             <li className="nav-item">
               <Link to="/login" className="nav-link">
-                Contact
+                Sign In
               </Link>
             </li>
           </ul>
         </div>
       </nav>
-
-      <div className="container">
-        <h1>Welcome to Resolute</h1>
-        <p>Explore the world of stock market trading</p>
-      </div>
     </div>
   );
 };

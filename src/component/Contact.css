@@ -1,0 +1,40 @@
+:root {
+  font-size: 15px;
+  --button-border-radius: 0.7rem 0.7rem 0.7rem 0.7rem;
+}
+.contact-wrapper {
+  background: black;
+}
+.gradient-for-contact {
+  position: absolute;
+  width: 10rem;
+  height: 20rem;
+  background: rgb(230, 222, 222);
+  filter: blur(100px);
+  border-radius: 100px;
+}
+
+.green-header-text {
+  color: green;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.white-header-text {
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+}
+
+.white-sub-header-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(168, 165, 160);
+}
+
+.contact-icon-wrapper {
+  padding: 2rem;
+  border: 1px solid;
+  margin: 0.2rem;
+  color: aliceblue;
+}
