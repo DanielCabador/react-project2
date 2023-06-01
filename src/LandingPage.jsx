@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import Navbar from './Navbar';
 
 const LandingPage = () => {
   return (
     <div className="landing-page">
+<<<<<<< HEAD
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
         <a className="navbar-brand mx-auto" href="#">
           Resolute
@@ -43,8 +45,21 @@ const LandingPage = () => {
           </ul>
         </div>
       </nav>
+=======
+
+      <div className="container my-5 text-center">
+        <h1>Welcome to Resolute</h1>
+        <p>Explore the world of stock market trading</p>
+      </div>
+>>>>>>> 7ad4a8fe5590f1de38b41e9524b417da8350a711
     </div>
   );
 };
 
 export default LandingPage;
+
+
+
+
+
+
