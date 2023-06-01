@@ -1,6 +1,8 @@
 // REACT ICONS
 import { MdCall } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
+import { FcGoogle } from "react-icons/fc";
+
 // CSS
 import "./Contact.css";
 
@@ -23,61 +25,76 @@ const Contact = () => {
             </div>
             <div className=" mt-3 ">
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6 text-center">
                   <div className="contact-icon-wrapper">
-                    <MdCall size={25} />
+                    <MdCall size={35} className="m-2 text-success" />
                     <span>Call</span>
                     <br />
                     <span>021 123 145 14</span>
-                    <div>Call Now</div>
+                    <div className="icon-button">Call Now</div>
                   </div>
                 </div>
 
-                <div className="col-md-6 icon-wrapper">
+                <div className="col-md-6  text-center">
                   <div className="contact-icon-wrapper">
-                    <BsFillChatDotsFill size={25} />
+                    <BsFillChatDotsFill
+                      size={35}
+                      className="m-2 text-success"
+                    />
                     <span>Chat</span>
                     <br />
                     <span>021 123 145 14</span>
-                    <div>Chat Now</div>
+                    <div className="icon-button">Chat Now</div>
                   </div>
                 </div>
               </div>
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6 text-center">
                   <div className="contact-icon-wrapper">
-                    <MdCall size={25} />
+                    <MdCall size={35} className="m-2 text-success" />
                     <span>Video Call</span>
                     <br />
                     <span>021 123 145 14</span>
-                    <div>Video Call Now</div>
+                    <div className="icon-button">Video Call Now</div>
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 text-center">
                   <div className="contact-icon-wrapper">
-                    <div className="p2">
-                      {" "}
-                      <BsFillChatDotsFill size={25} />
+                    <div className="">
+                      <BsFillChatDotsFill
+                        size={35}
+                        className="m-2 text-success"
+                      />
                       <span>Message</span>
                       <br />
                       <span>021 123 145 14</span>
                     </div>
-                    <div>Message Now</div>
+                    <div className="icon-button">Message Now</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-7 text-center accordion-column">
-            <h1 className="text-center">Accordions will display here..</h1>
-            <img src="./public/contact-image.png" alt="" />
+          <div className="col-md-7 text-center right-section-wrapper">
+            <h1 className="text-center right-section-header">Resolute</h1>
+            <img
+              src="./public/contact-image.png"
+              alt=""
+              className="right-section-image"
+            />
           </div>
         </div>
       </div>
-      <div className="text-center">
-        <span>Get Started with Resolute</span>
-        <span>By Signing Up</span>
-        <span>Sign In With Google</span>
+      <div className="text-center p-1 get-started-wrapper">
+        <div className="get-started-text-wrapper">
+          <span>Get Started with Resolute</span> <br />
+          <span>By Signing Up</span>
+        </div>
+        <br />
+        <button className="text-center p-2 get-started-button ">
+          <FcGoogle size={30} />
+          Sign In With Google
+        </button>
       </div>
     </>
   );

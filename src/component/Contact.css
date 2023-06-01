@@ -38,3 +38,52 @@
   margin: 0.2rem;
   color: aliceblue;
 }
+
+.icon-button {
+  border: 1px solid;
+  border-radius: var(--button-border-radius);
+  transition: all 300ms ease-in;
+}
+
+.icon-button:hover {
+  scale: 1.1;
+  background-color: rgb(77, 215, 77);
+  color: black;
+}
+
+/* right side */
+
+.right-section-image {
+  width: 100%;
+}
+
+.right-section-header {
+  z-index: 99;
+  color: aliceblue;
+  color: green;
+}
+
+/* bottom part */
+
+.get-started-wrapper {
+  color: aliceblue;
+  font-weight: 500;
+  background: #000;
+}
+
+.get-started-text-wrapper {
+  background: #000;
+  font-size: 1.5rem;
+  color: green;
+}
+
+.get-started-button {
+  border-radius: var(--button-border-radius);
+  border: none;
+  font-weight: 500;
+  transition: all 300ms ease-in;
+}
+
+.get-started-button:hover {
+  scale: 1.1;
+}
