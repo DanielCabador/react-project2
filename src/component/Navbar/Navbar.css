@@ -1,0 +1,34 @@
+:root {
+  font-size: 16px;
+}
+.navbar-wrapper {
+  background: black;
+}
+
+.list-wrapper {
+  color: white;
+  transition: all 200ms ease-in;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+}
+
+.list-wrapper:hover {
+  scale: 1.1;
+  color: aliceblue;
+}
+.button-toggle {
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 1px;
+}
+
+.white-gradient {
+  position: absolute;
+  width: 10rem;
+  height: 20rem;
+  background: rgb(230, 222, 222);
+  filter: blur(100px);
+  border-radius: 100px;
+}
