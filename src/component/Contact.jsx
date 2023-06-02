@@ -7,7 +7,6 @@ const Contact = () => {
   return (
     <>
       <div className="container-fluid  p-5 contact-wrapper">
-        <div className="gradient-for-contact"></div>
         <div className="row">
           <div className="col-md-5 contact-column">
             <div className="contact-text-wrapper row">
