@@ -49,12 +49,13 @@
   scale: 1.1;
   background-color: rgb(77, 215, 77);
   color: black;
+  cursor: pointer;
 }
 
 /* right side */
 
 .right-section-image {
-  width: 100%;
+  width: 70%;
 }
 
 .right-section-header {
@@ -80,7 +81,7 @@
 .get-started-button {
   border-radius: var(--button-border-radius);
   border: none;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 300ms ease-in;
 }
 

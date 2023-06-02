@@ -1,12 +1,8 @@
-// REACT ICONS
 import { MdCall } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-
-// CSS
 import "./Contact.css";
 
-// JSX FUNCTION COMPONENT
 const Contact = () => {
   return (
     <>
@@ -82,19 +78,19 @@ const Contact = () => {
               alt=""
               className="right-section-image"
             />
+            <div className="text-center p-1 get-started-wrapper">
+              <div className="get-started-text-wrapper">
+                <span>Get Started with Resolute</span> <br />
+                <span>By Signing Up</span>
+              </div>
+              <br />
+              <button className="text-center p-2 get-started-button ">
+                <FcGoogle size={22} />
+                Sign In With Google
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="text-center p-1 get-started-wrapper">
-        <div className="get-started-text-wrapper">
-          <span>Get Started with Resolute</span> <br />
-          <span>By Signing Up</span>
-        </div>
-        <br />
-        <button className="text-center p-2 get-started-button ">
-          <FcGoogle size={30} />
-          Sign In With Google
-        </button>
       </div>
     </>
   );
