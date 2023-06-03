@@ -6,7 +6,10 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
-    setShow(!show);
+    const timer = setTimeout(() => {
+      setShow(!show);
+    }, 300);
+    return () => clearTimeout(timer);
   };
 
   return (

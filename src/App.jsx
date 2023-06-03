@@ -5,7 +5,7 @@ import Contact from "./component/Contact";
 import Navbar from "./component/Navbar/Navbar";
 import About from "./component/About/About";
 import HeroPage from "./HeroPage";
-
+import Footer from "./component/Footer/Footer";
 const App = () => {
   return (
     <div className="app-container">
@@ -16,6 +16,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

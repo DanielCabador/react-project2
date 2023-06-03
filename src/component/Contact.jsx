@@ -84,7 +84,7 @@ const Contact = () => {
               </div>
               <br />
               <button className="text-center p-2 get-started-button ">
-                <FcGoogle size={22} />
+                <FcGoogle size={18} />
                 Sign In With Google
               </button>
             </div>
