@@ -6,7 +6,7 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <>
-      <div className="container-fluid  p-5 contact-wrapper">
+      <div className="container-fluid  p-5 contact-wrapper mt-5">
         <div className="row">
           <div className="col-md-5 contact-column">
             <div className="contact-text-wrapper row">
