@@ -1,6 +1,5 @@
 import { MdCall } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
-import { FcGoogle } from "react-icons/fc";
 import "./Contact.css";
 
 const Contact = () => {
@@ -83,10 +82,6 @@ const Contact = () => {
                 <span>By Signing Up</span>
               </div>
               <br />
-              <button className="text-center p-2 get-started-button ">
-                <FcGoogle size={18} />
-                Sign In With Google
-              </button>
             </div>
           </div>
         </div>
