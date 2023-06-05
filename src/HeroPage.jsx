@@ -1,9 +1,7 @@
 const HeroPage = () => {
   return (
-    <div className="hero-page bg-black">
-      <br />
-      <br />
-      <div className="container-fluid my-5">
+    <div className="hero-page bg-black mt-5 pt-5">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-lg-6">
             <a href="#" className="picture-link">
@@ -23,6 +21,8 @@ const HeroPage = () => {
 };
 
 export default HeroPage;
+
+
 
 
 
