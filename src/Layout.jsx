@@ -1,8 +1,10 @@
 import HeroPage from "./HeroPage";
+import Update from "./component/update/Update";
 export const Layout = () => {
   return (
-    <>
-      <HeroPage title />
-    </>
+    <div>
+      <HeroPage />
+      <Update />
+    </div>
   );
 };

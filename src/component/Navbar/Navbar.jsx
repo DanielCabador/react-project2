@@ -89,11 +89,6 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link list-wrapper" to="/newupdate">
-                  New Update
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link list-wrapper" to="/about">
                   About
                 </Link>
