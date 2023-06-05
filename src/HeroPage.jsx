@@ -5,7 +5,7 @@ const HeroPage = () => {
       <br />
       <div className="-fluid">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-7">
             <a href="#" className="picture-link">
               <img
                 src="public\Greenblack-image.jpg"
@@ -14,7 +14,7 @@ const HeroPage = () => {
               />
             </a>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-5">
             <div className="text-container text-white">
               <h1>This is the Home Page</h1>
               <p>
