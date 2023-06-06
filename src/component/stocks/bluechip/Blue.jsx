@@ -10,7 +10,7 @@ const Blue = () => {
               src="./swiperC.png"
               alt=""
               className="img-fluid"
-              style={{ borderRadius: "2rem", width: "80%" }}
+              style={{ borderRadius: "2rem", width: "70%" }}
             />
           </div>
           <div className="col-md-7 p-5">

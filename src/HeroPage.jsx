@@ -39,7 +39,7 @@ const HeroPage = () => {
   };
 
   return (
-    <div className="App container p-5">
+    <div className="App container p-4">
       <br />
       <div className="row">
         <div className="col-md-7 container  " style={{ borderRadius: "2rem" }}>

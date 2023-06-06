@@ -11,6 +11,7 @@ export const Layout = () => {
       <Update />
       <hr />
       <StocksLayout />
+      <br />
     </div>
   );
 };
