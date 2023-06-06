@@ -39,15 +39,15 @@ const HeroPage = () => {
   };
 
   return (
-    <div className="App container p-4">
+    <div className="App container p-4 dark-mode">
       <br />
       <div className="row">
-        <div className="col-md-7 container  " style={{ borderRadius: "2rem" }}>
+        <div className="col-md-7 container" style={{ borderRadius: "2rem" }}>
           <h1 className="text-success">Resolute Stock Market Chart</h1>
           <h4 className="text-light">
             Stock Symbol: <span>Resolute..</span>
           </h4>
-          <div className="white-gradient"></div>
+          <div className="dark-gradient"></div>
           <Plot
             data={[
               {
@@ -55,13 +55,23 @@ const HeroPage = () => {
                 y: stockChartYValues,
                 type: "scatter",
                 mode: "lines+markers",
-                marker: { color: "#333444" },
+                line: { color: "#fff" },
+                marker: { color: "#fff" },
               },
             ]}
             layout={{
               width: "50%",
               height: 440,
               title: "Latest Data as of 2023",
+              paper_bgcolor: "#333",
+              plot_bgcolor: "#333",
+              font: {
+                color: "#fff",
+              },
+            }}
+            config={{
+              responsive: true,
+              displayModeBar: false,
             }}
           />
         </div>
@@ -73,7 +83,7 @@ const HeroPage = () => {
           <h5 className="text-light">
             Navigate the Stock Market with Confidence.
           </h5>
-          <div className="white-gradient"></div>
+          <div className="dark-gradient"></div>
           <div className="p-4 mt-3">
             <img src="./swiperE.png" alt="" />
           </div>
@@ -84,3 +94,5 @@ const HeroPage = () => {
 };
 
 export default HeroPage;
+
+
