@@ -29,37 +29,41 @@ const Update = () => {
   };
 
   return (
-    <div className="swiper-container p-5">
-      <div className="swiper-wrapper text-success">
-        {sliderContent.map((slide, index) => (
-          <div className="swiper-slide" key={index}>
-            <h4 className="text-success">{slide.name}</h4>
-            <img
-              src={slide.image}
-              alt={slide.name}
-              style={{ width: "70%", borderRadius: "1rem" }}
-              className=""
-            />
-            <p className="mt-1 text-light">{slide.detail}</p>
-          </div>
-        ))}
-      </div>
+    <div className="container p-4">
+      <div className="swiper-container text-center">
+        <div className="swiper-wrapper text-success">
+          {sliderContent.map((slide, index) => (
+            <div className="swiper-slide" key={index}>
+              <h4 className="text-success">{slide.name}</h4>
+              <div className="white-gradient"></div>
 
-      <div className="swiper-button-container container">
-        <button
-          className="swiper-button m-2"
-          onClick={() => handleButtonClick("prev")}
-          style={{ background: "green", color: "white" }}
-        >
-          Prev
-        </button>
-        <button
-          className="swiper-button"
-          onClick={() => handleButtonClick("next")}
-          style={{ background: "green", color: "white", borderRadius: "2px" }}
-        >
-          Next
-        </button>
+              <img
+                src={slide.image}
+                alt={slide.name}
+                style={{ width: "86%", borderRadius: "1rem" }}
+              />
+
+              <p className="mt-1 text-light ">{slide.detail}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="swiper-button-container container">
+          <button
+            className="swiper-button m-2"
+            onClick={() => handleButtonClick("prev")}
+            style={{ background: "green", color: "white" }}
+          >
+            Prev
+          </button>
+          <button
+            className="swiper-button"
+            onClick={() => handleButtonClick("next")}
+            style={{ background: "green", color: "white", borderRadius: "2px" }}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );

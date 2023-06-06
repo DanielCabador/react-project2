@@ -1,8 +1,9 @@
 import "./TypeOfStocks.css";
 const TypeOfStocks = () => {
   return (
-    <div className="bg-dark p-3 mt-5 text-center">
-      <h1 className="text-success mt-2 text-center">TYPE OF STOCKS</h1>
+    <div className="container  p-5 ">
+      <h1 className="text-success">Resolute</h1>
+      <h5 className="text-light">Stock Market</h5>
     </div>
   );
 };

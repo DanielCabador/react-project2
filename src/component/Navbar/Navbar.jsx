@@ -53,7 +53,6 @@ const Navbar = () => {
               alt=""
               style={{ width: "25%", height: "20%" }}
             />
-            <div className="white-gradient"></div>
           </Link>
           <button
             className="navbar-toggler navbar-toggler-x"
@@ -64,7 +63,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <div className="white-gradient"></div>
+            <div className="gradient"></div>
             <button className="button-toggle" onClick={handleShow}>
               {show ? <span>Close</span> : <span>Menu</span>}
             </button>
@@ -107,7 +106,6 @@ const Navbar = () => {
             </ul>
             {value && (
               <div className="text-center">
-                <div className="white-gradient"></div>
                 <div>
                   <b className="text-success">Signed In as:</b> <br />
                   <span className="text-light">{value}</span>

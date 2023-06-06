@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Plot from "react-plotly.js";
+import "./Hero.css";
 
 let stockName = "MSFT";
 
@@ -46,6 +47,7 @@ const HeroPage = () => {
           <h4 className="text-light">
             Stock Symbol: <span>Resolute..</span>
           </h4>
+          <div className="white-gradient"></div>
           <Plot
             data={[
               {
@@ -71,6 +73,7 @@ const HeroPage = () => {
           <h5 className="text-light">
             Navigate the Stock Market with Confidence.
           </h5>
+          <div className="white-gradient"></div>
           <img src="./swiperE.png" alt="" />
         </div>
       </div>

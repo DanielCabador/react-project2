@@ -23,12 +23,3 @@
   border: none;
   border-radius: 1px;
 }
-
-.white-gradient {
-  position: absolute;
-  width: 10rem;
-  height: 20rem;
-  background: rgb(230, 222, 222);
-  filter: blur(100px);
-  border-radius: 100px;
-}
