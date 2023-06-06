@@ -10,10 +10,7 @@ const Navbar = () => {
   const [signedIn, setSignedIn] = useState(false);
 
   const handleShow = () => {
-    const timer = setTimeout(() => {
-      setShow(!show);
-    }, 300);
-    return () => clearTimeout(timer);
+    setShow(!show);
   };
 
   const HandleClick = () => {
@@ -47,11 +44,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="container-fluid navbar-wrapper fixed-top p-2">
+    <div className="container-fluid navbar-wrapper  p-2">
       <nav className="navbar navbar-expand-lg bg-body-tertiary ">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            Logo
+            <img
+              src="./Logoooo.png"
+              alt=""
+              style={{ width: "25%", height: "20%" }}
+            />
             <div className="white-gradient"></div>
           </Link>
           <button

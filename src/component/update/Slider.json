@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Common Stocks",
+    "detail": "Widely traded shares representing ownership,with voting rights.",
+    "image": "./swiperA.png"
+  },
+  {
+    "name": "Preferred Stocks",
+    "detail": "Higher claim on assets and fixed dividend rates.",
+    "image": "./swiperB.png"
+  },
+  {
+    "name": "Blue-Chip Stocks",
+    "detail": "stable companies with a history of reliable performance.",
+    "image": "./swiperC.png"
+  },
+  {
+    "name": "Growth Stocks",
+    "detail": "Above-average rate, reinvesting earnings for expansion.",
+    "image": "./swiperD.png"
+  },
+  {
+    "name": "Value Stocks",
+    "detail": "Potentially poised for price appreciation.",
+    "image": "./swiperE.png"
+  },
+  {
+    "name": "Dividend Stocks",
+    "detail": "Earnings as dividends to shareholders.",
+    "image": "./swiperF.png"
+  }
+]

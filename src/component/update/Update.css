@@ -1,0 +1,6 @@
+.swiper-wrapper {
+  transition: all 300ms ease-in;
+}
+.swiper-wrapper:hover {
+  scale: 1.1;
+}

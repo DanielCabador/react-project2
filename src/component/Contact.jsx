@@ -5,7 +5,7 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <>
-      <div className="container-fluid  p-5 contact-wrapper mt-5">
+      <div className="container-fluid  p-5 contact-wrapper mt-2">
         <div className="row">
           <div className="col-md-5 contact-column">
             <div className="contact-text-wrapper row">
@@ -70,20 +70,20 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-md-7 text-center right-section-wrapper">
-            <h1 className="text-center right-section-header">Resolute</h1>
+            <img src="./Logoooo.png" alt="" /> <br />
             <img
               src="./public/contact-image.png"
               alt=""
               className="right-section-image"
             />
-            <div className="text-center p-1 get-started-wrapper">
-              <div className="get-started-text-wrapper">
-                <span>Get Started with Resolute</span> <br />
-                <span>By Signing Up</span>
-              </div>
-              <br />
-            </div>
           </div>
+        </div>
+        <div
+          className="get-started-text-wrapper text-center"
+          style={{ color: "white", fontWeight: "500" }}
+        >
+          <span>Get Started with Resolute</span> <br />
+          <span>By Signing Up</span>
         </div>
       </div>
     </>
