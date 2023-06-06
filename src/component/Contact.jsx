@@ -7,7 +7,7 @@ const Contact = () => {
     <>
       <div className="container-fluid  p-5 contact-wrapper mt-2">
         <div className="row">
-          <div className="col-md-5 contact-column">
+          <div className="col-md-5 contact-column p-3">
             <div className="contact-text-wrapper row">
               <span className="green-header-text">Our Contacts</span>
               <span className="white-header-text">Easy to Contact Us</span>
@@ -19,7 +19,7 @@ const Contact = () => {
             </div>
             <div className=" mt-3 ">
               <div className="row">
-                <div className="col-md-6 text-center">
+                <div className="col-md-6 text-center ">
                   <div className="contact-icon-wrapper">
                     <MdCall size={35} className="m-2 text-success" />
                     <span>Call</span>
@@ -38,7 +38,19 @@ const Contact = () => {
                     <span>Chat</span>
                     <br />
                     <span>021 123 145 14</span>
-                    <div className="icon-button">Chat Now</div>
+                    <div className="icon-button">
+                      <a href="mailto:devop.jas@gmail.com">
+                        <button
+                          style={{
+                            border: "none",
+                            background: "transparent",
+                            color: "white",
+                          }}
+                        >
+                          Chat Now
+                        </button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -69,8 +81,9 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-7 text-center right-section-wrapper">
-            <img src="./Logoooo.png" alt="" /> <br />
+          <div className="col-md-7 text-center right-section-wrapper p-3">
+            <img src="./Logoooo.png" alt="" />
+            <div className="white-gradient"></div> <br />
             <img
               src="./public/contact-image.png"
               alt=""

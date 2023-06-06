@@ -50,16 +50,26 @@ const Update = () => {
 
         <div className="swiper-button-container container">
           <button
-            className="swiper-button m-2"
+            className="swiper-button m-2 "
             onClick={() => handleButtonClick("prev")}
-            style={{ background: "green", color: "white" }}
+            style={{
+              background: "green",
+              color: "white",
+              borderRadius: "2px",
+              border: "none",
+            }}
           >
             Prev
           </button>
           <button
             className="swiper-button"
             onClick={() => handleButtonClick("next")}
-            style={{ background: "green", color: "white", borderRadius: "2px" }}
+            style={{
+              background: "green",
+              color: "white",
+              borderRadius: "2px",
+              border: "none",
+            }}
           >
             Next
           </button>

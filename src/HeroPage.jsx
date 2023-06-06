@@ -39,7 +39,7 @@ const HeroPage = () => {
   };
 
   return (
-    <div className="App container">
+    <div className="App container p-5">
       <br />
       <div className="row">
         <div className="col-md-7 container  " style={{ borderRadius: "2rem" }}>
@@ -65,7 +65,7 @@ const HeroPage = () => {
             }}
           />
         </div>
-        <div className="col-md-5 ">
+        <div className="col-md-5">
           <h2 className="text-light ">
             Empower your investments with{" "}
             <b style={{ color: "green" }}>Resolute</b>.
@@ -74,7 +74,9 @@ const HeroPage = () => {
             Navigate the Stock Market with Confidence.
           </h5>
           <div className="white-gradient"></div>
-          <img src="./swiperE.png" alt="" />
+          <div className="p-4 mt-3">
+            <img src="./swiperE.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
