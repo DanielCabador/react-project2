@@ -42,7 +42,7 @@ const HeroPage = () => {
     <div className="App container p-4 dark-mode">
       <br />
       <div className="row">
-        <div className="col-md-7 con" style={{ borderRadius: "2rem" }}>
+        <div className="col-md-7 container" style={{ borderRadius: "2rem" }}>
           <h1 className="text-success">Resolute Stock Market Chart</h1>
           <h4 className="text-light">
             Stock Symbol: <span>Resolute..</span>

@@ -12,7 +12,7 @@ const Footer = () => {
             <span>High Quality Service</span>
           </div>
           <div className="col-md-6">
-            <div className="col icon-wrapper text-center">
+            <div className="col icon-wrapper text-end">
               <a href="https://www.instagram.com">
                 <FaInstagram className="mr-3 icon-wrapper" size={24} />
               </a>
@@ -21,13 +21,12 @@ const Footer = () => {
               </a>
               <a href="https://www.twitter.com">
                 <FaTwitter size={24} className="icon-wrapper" />
-              </a>
-            </div>
-            <div className="text-center m-2">
-              <p>145 New you, FL 4571, USA</p>
-              <span className="m-2">About</span>
-              <span className="m-2">Contact</span>
-              <span className="m-2">Home</span>
+              </a>{" "}
+              <br />
+              <p className="text-end text-light">145 New you, FL 4571, USA</p>
+              <span className="m-2   text-end">About</span>
+              <span className="m-2  text-end">Contact</span>
+              <span className="m-2  text-end">Home</span>
             </div>
           </div>
         </div>

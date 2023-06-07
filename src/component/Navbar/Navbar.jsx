@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, provider } from "../../Authentication/firebase";
+import { memo } from "react";
 import CountUp from "react-countup";
 import "./Navbar.css";
 
@@ -129,4 +130,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);
