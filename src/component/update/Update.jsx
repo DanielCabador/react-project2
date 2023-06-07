@@ -4,6 +4,7 @@ import "swiper/swiper-bundle.css";
 import { sliderSettings } from "./common";
 import sliderContent from "./Slider.json";
 import "./Update.css";
+import { memo } from "react";
 
 const Update = () => {
   const swiperRef = useRef(null);
@@ -79,4 +80,4 @@ const Update = () => {
   );
 };
 
-export default Update;
+export default memo(Update);
