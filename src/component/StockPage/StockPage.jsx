@@ -79,7 +79,7 @@ const StockPage = () => {
 
   return (
     <div className="container">
-      <h2 className="market-section-label text-start ml-5">Market Section</h2>
+      <h2 className="market-section-label text-start ml-5">Crypto Market Overview</h2>
       <div className="search-bar-container">
         <input
           type="text"
@@ -118,4 +118,3 @@ const StockPage = () => {
 };
 
 export default StockPage;
-
