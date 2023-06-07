@@ -49,7 +49,6 @@ const Contact = () => {
                         >
                           Chat Now
                         </button>
-                        <div className="white-gradient"></div>
                       </a>
                     </div>
                   </div>
