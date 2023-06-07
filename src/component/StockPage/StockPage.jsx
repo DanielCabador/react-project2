@@ -9,13 +9,23 @@ const StockPage = () => {
   useEffect(() => {
     const fetchMarketData = async () => {
       try {
+        // Check if the data is already cached
+        const cachedData = localStorage.getItem("marketData");
+        if (cachedData) {
+          setMarketData(JSON.parse(cachedData));
+          return;
+        }
+
         const response = await axios.get(
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=Php&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
         );
         setMarketData(response.data);
+        localStorage.setItem("marketData", JSON.stringify(response.data));
         console.log(response.data);
       } catch (error) {
         console.log(error);
+        // Retry the request after a delay (exponential backoff strategy)
+        setTimeout(fetchMarketData, 2000);
       }
     };
 
@@ -42,13 +52,20 @@ const StockPage = () => {
     }
   };
 
-  const formatPrice = (price) => {
-    if (price >= 1000000) {
-      return `${(price / 1000000).toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
+  const formatPrice = (price, currency) => {
+    const options = {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    };
+
+    if (currency === "bitcoin") {
+      return `${(price / 1000000).toLocaleString("en-US", options)} Php`;
+    } else if (price >= 1000000) {
+      return `${(price / 1000000).toLocaleString("en-US", options)} Php`;
     } else if (price >= 1000) {
-      return `${(price / 1000).toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
+      return `${(price / 1000).toLocaleString("en-US", options)} Php`;
     } else {
-      return price.toLocaleString("en-US", { minimumFractionDigits: 2 });
+      return price.toLocaleString("en-US", options) + " Php";
     }
   };
 
@@ -62,16 +79,16 @@ const StockPage = () => {
 
   return (
     <div className="container">
-    <h2 className="market-section-label text-start ml-5">Market Section</h2>
-    <div className="search-bar-container">
-      <input
-        type="text"
-        placeholder="🔍 Search CryptoCurrencies"
-        value={searchTerm}
-        onChange={handleSearch}
-        className="search-bar"
-      />
-    </div>
+      <h2 className="market-section-label text-start ml-5">Market Section</h2>
+      <div className="search-bar-container">
+        <input
+          type="text"
+          placeholder="🔍 Search CryptoCurrencies"
+          value={searchTerm}
+          onChange={handleSearch}
+          className="search-bar"
+        />
+      </div>
       <div className="market-container">
         {filteredCoins.map((coin) => (
           <div className="coin-box" key={coin.id}>
@@ -82,11 +99,12 @@ const StockPage = () => {
               <div className="coin-text">
                 <p className="coin-name">{coin.name}</p>
                 <p className={`coin-price ${getColorClass(coin.price_change_24h)}`}>
-                  {formatPrice(coin.current_price)} Php
+                  {formatPrice(coin.current_price, coin.name)}
                 </p>
                 <p className={`coin-marketcap ${getColorClass(coin.market_cap_change)}`}>
-                  {formatPrice(coin.market_cap)} Php
+                  {formatPrice(coin.market_cap, coin.name)}
                 </p>
+
                 <p className={`coin-change ${getColorClass(coin.price_change_percentage_24h)}`}>
                   {getChangeIndicator(coin.price_change_percentage_24h)} {coin.price_change_percentage_24h}%
                 </p>
@@ -100,5 +118,4 @@ const StockPage = () => {
 };
 
 export default StockPage;
-
 
