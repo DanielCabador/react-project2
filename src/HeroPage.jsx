@@ -60,7 +60,7 @@ const HeroPage = () => {
               },
             ]}
             layout={{
-              width: "50%",
+              width: "60%",
               height: 440,
               title: "Latest Data as of 2023",
               paper_bgcolor: "#333",

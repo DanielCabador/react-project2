@@ -8,7 +8,7 @@ const Divident = () => {
               src="./swiperF.png"
               alt=""
               className="img-fluid"
-              style={{ borderRadius: "2rem", width: "70%" }}
+              style={{ borderRadius: "2rem", width: "90%" }}
             />
           </div>
           <div className="col-md-7 p-5">
