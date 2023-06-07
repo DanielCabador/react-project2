@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./StockPage.css";
-import { FaSearch } from "react-icons/fa";
 
 const StockPage = () => {
   const [marketData, setMarketData] = useState([]);
@@ -63,17 +62,16 @@ const StockPage = () => {
 
   return (
     <div className="container">
-      <h2 className="market-section-label text-start ml-5">Market Section</h2>
-      <div className="search-bar-container">
-        <input
-          type="text"
-          placeholder="Search CryptoCurrencies"
-          value={searchTerm}
-          onChange={handleSearch}
-          className="search-bar"
-        />
-        <FaSearch className="search-icon" />
-      </div>
+    <h2 className="market-section-label text-start ml-5">Market Section</h2>
+    <div className="search-bar-container">
+      <input
+        type="text"
+        placeholder="🔍 Search CryptoCurrencies"
+        value={searchTerm}
+        onChange={handleSearch}
+        className="search-bar"
+      />
+    </div>
       <div className="market-container">
         {filteredCoins.map((coin) => (
           <div className="coin-box" key={coin.id}>
