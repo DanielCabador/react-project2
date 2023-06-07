@@ -15,7 +15,6 @@ const StockPage = () => {
     fetch(API_URL)
       .then((response) => response.json())
       .then((data) => {
-        // Process the data as needed
         setStockData(data);
       })
       .catch((error) => {
@@ -25,7 +24,7 @@ const StockPage = () => {
 
   return (
     <div>
-      <h2 className="text-center text-dark">This is the stock page</h2>
+      <h2 className="text-center text-dark"> Stock Page</h2>
       
       {stockData && (
         <div>
