@@ -49,6 +49,7 @@ const Contact = () => {
                         >
                           Chat Now
                         </button>
+                        <div className="white-gradient"></div>
                       </a>
                     </div>
                   </div>
@@ -83,7 +84,7 @@ const Contact = () => {
           </div>
           <div className="col-md-6 text-center right-section-wrapper p-3">
             <img src="./Logoooo.png" alt="" />
-            <div className="white-gradient"></div> <br />
+            <br />
             <img
               src="./public/contact-image.png"
               alt=""

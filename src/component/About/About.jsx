@@ -1,5 +1,5 @@
-import React from 'react';
-import './About.css';
+import React from "react";
+import "./About.css";
 
 const About = () => {
   return (
@@ -12,13 +12,19 @@ const About = () => {
               <div className="card text-white ">
                 <div className="card-body bg-black p-5">
                   <div>
+                    <div className="white-gradient"></div>
                     <h4>
-                      Welcome to <strong className='text-success'>Resolute</strong>! We provide up-to-date information and analysis on various stocks and financial markets.
+                      Welcome to{" "}
+                      <strong className="text-success">Resolute</strong>! We
+                      provide up-to-date information and analysis on various
+                      stocks and financial markets.
                     </h4>
                   </div>
                   <div>
                     <h>
-                      Our mission is to empower investors with the knowledge and tools they need to make informed decisions in the dynamic world of investing.
+                      Our mission is to empower investors with the knowledge and
+                      tools they need to make informed decisions in the dynamic
+                      world of investing.
                     </h>
                   </div>
                 </div>
@@ -34,7 +40,8 @@ const About = () => {
                     <div className="card text-white mb-3 h-100">
                       <div className="card-body bg-black">
                         <p className="card-text">
-                          <strong className='text-success'>Provide</strong> <br /> accurate and timely stock market information
+                          <strong className="text-success">Provide</strong>{" "}
+                          <br /> accurate and timely stock market information
                         </p>
                       </div>
                     </div>
@@ -43,7 +50,8 @@ const About = () => {
                     <div className="card text-white mb-3 h-100">
                       <div className="card-body bg-black">
                         <p className="card-text">
-                        <strong className='text-success'>Offer</strong> <br /> comprehensive analysis of financial markets
+                          <strong className="text-success">Offer</strong> <br />{" "}
+                          comprehensive analysis of financial markets
                         </p>
                       </div>
                     </div>
@@ -52,7 +60,10 @@ const About = () => {
                     <div className="card text-white mb-3 h-100">
                       <div className="card-body bg-black">
                         <p className="card-text">
-                        <strong className='text-success'>Empower</strong> <br />investors with knowledge and tools for informed decision-making
+                          <strong className="text-success">Empower</strong>{" "}
+                          <br />
+                          investors with knowledge and tools for informed
+                          decision-making
                         </p>
                       </div>
                     </div>
@@ -61,7 +72,8 @@ const About = () => {
                     <div className="card text-white mb-3 h-100">
                       <div className="card-body bg-black">
                         <p className="card-text">
-                        <strong className='text-success'>Facilitate</strong> <br /> access to diverse investment opportunities
+                          <strong className="text-success">Facilitate</strong>{" "}
+                          <br /> access to diverse investment opportunities
                         </p>
                       </div>
                     </div>
