@@ -6,10 +6,9 @@ export const Layout = () => {
   return (
     <div>
       <HeroPage />
-      <hr style={{ color: "green" }} />
       <TypeOfStocks />
+      <br />
       <Update />
-      <hr />
       <StocksLayout />
       <br />
     </div>
