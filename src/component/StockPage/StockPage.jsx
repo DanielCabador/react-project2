@@ -9,7 +9,7 @@ const StockPage = () => {
   useEffect(() => {
     const fetchMarketData = async () => {
       try {
-        // Check if the data is already cached
+       
         const cachedData = localStorage.getItem("marketData");
         if (cachedData) {
           setMarketData(JSON.parse(cachedData));
@@ -83,7 +83,7 @@ const StockPage = () => {
       <div className="search-bar-container">
         <input
           type="text"
-          placeholder="🔍 Search CryptoCurrencies"
+          placeholder="🔍 Search"
           value={searchTerm}
           onChange={handleSearch}
           className="search-bar"
