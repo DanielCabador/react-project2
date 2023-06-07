@@ -69,11 +69,9 @@
 .get-started-wrapper {
   color: aliceblue;
   font-weight: 500;
-  background: #000;
 }
 
 .get-started-text-wrapper {
-  background: #000;
   font-size: 1.5rem;
   color: green;
 }

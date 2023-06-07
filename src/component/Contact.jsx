@@ -7,7 +7,7 @@ const Contact = () => {
     <>
       <div className="container-fluid  p-5 contact-wrapper mt-2">
         <div className="row">
-          <div className="col-md-5 contact-column p-3">
+          <div className="col-md-6 contact-column p-3">
             <div className="contact-text-wrapper row">
               <span className="green-header-text">Our Contacts</span>
               <span className="white-header-text">Easy to Contact Us</span>
@@ -81,7 +81,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-7 text-center right-section-wrapper p-3">
+          <div className="col-md-6 text-center right-section-wrapper p-3">
             <img src="./Logoooo.png" alt="" />
             <div className="white-gradient"></div> <br />
             <img
@@ -92,10 +92,13 @@ const Contact = () => {
           </div>
         </div>
         <div
-          className="get-started-text-wrapper text-center"
+          className="get-started-text-wrapper text-center mt-4"
           style={{ color: "white", fontWeight: "500" }}
         >
-          <span>Get Started with Resolute</span> <br />
+          <span>
+            Get Started with <b className="text-success">Resolute</b>
+          </span>{" "}
+          <br />
           <span>By Signing Up</span>
         </div>
       </div>
