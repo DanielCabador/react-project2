@@ -5,6 +5,8 @@ import Navbar from "./component/Navbar/Navbar";
 import About from "./component/About/About";
 import { Layout } from "./Layout";
 import Footer from "./component/Footer/Footer";
+import StockPage from "./component/StockPage/StockPage";
+
 const App = () => {
   return (
     <div className="app-container">
