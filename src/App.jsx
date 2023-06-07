@@ -6,6 +6,7 @@ import About from "./component/About/About";
 import { Layout } from "./Layout";
 import Footer from "./component/Footer/Footer";
 import StockPage from "./component/StockPage/StockPage";
+import axios from 'axios';
 
 const App = () => {
   return (
