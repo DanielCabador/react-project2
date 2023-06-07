@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, provider } from "../../Authentication/firebase";
+import CountUp from "react-countup";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -103,7 +104,16 @@ const Navbar = () => {
               <div className="text-center">
                 <div>
                   <b className="text-success">Signed In as:</b> <br />
-                  <span className="text-light">{value}</span>
+                  <span className="text-light">{value}</span> <br />
+                  <span className="text-light">
+                    Active Users:{" "}
+                    <CountUp
+                      className="text-warning"
+                      start={4}
+                      end={500}
+                      duration={10000}
+                    />
+                  </span>
                 </div>
               </div>
             )}

@@ -11,7 +11,7 @@ const Footer = () => {
             <span>Our Mission is to Provide</span> <br />
             <span>High Quality Service</span>
           </div>
-          <div className="col-md-6 ">
+          <div className="col-md-6">
             <div className="col icon-wrapper text-center">
               <a href="https://www.instagram.com">
                 <FaInstagram className="mr-3 icon-wrapper" size={24} />
@@ -24,8 +24,9 @@ const Footer = () => {
               </a>
             </div>
             <div className="text-center m-2">
-              <span className="m-2">About</span>{" "}
-              <span className="m-2">Contact</span>{" "}
+              <p>145 New you, FL 4571, USA</p>
+              <span className="m-2">About</span>
+              <span className="m-2">Contact</span>
               <span className="m-2">Home</span>
             </div>
           </div>

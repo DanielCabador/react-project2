@@ -83,7 +83,7 @@ const HeroPage = () => {
           <h5 className="text-light">
             Navigate the Stock Market with Confidence.
           </h5>
-          <div className="dark-gradient"></div>
+          <div className="white-gradient"></div>
           <div className="p-4 mt-3">
             <img src="./swiperE.png" alt="" />
           </div>
@@ -94,5 +94,3 @@ const HeroPage = () => {
 };
 
 export default HeroPage;
-
-
