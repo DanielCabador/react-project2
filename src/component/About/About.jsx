@@ -5,7 +5,6 @@ import 'aos/dist/aos.css';
 
 AOS.init();
 
-
 const About = () => {
   return (
     <div className="container text-center">
@@ -83,7 +82,6 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -91,22 +89,42 @@ const About = () => {
         </div>
       </div>
       <div className="row">
-                    <div data-aos="fade-right" className="col-md-5  m-5 p-5">
-                      <img className="img-fluid" src="./swiperG.png" alt="" />
-                           <h1 className="text-success mt-4">Keep on Track</h1>
-                    </div>
-                    <div data-aos="fade-left" className="col-md-5  m-5 p-5">
-                      <img className="img-fluid" src="./swiperH.png" alt="" />
-                           <h1 className="text-success mt-4">Financial Services</h1>
-                    </div>
-                    <div data-aos="fade-right" className="col-md-5  m-5 p-5">
-                      <img className="img-fluid" src="./swiperI.png" alt="" />
-                           <h1 className="text-success mt-4">Real-Time Data</h1>
-                    </div>
-                    <div data-aos="fade-left" className="col-md-5  m-5 p-5">
-                      <img src="./swiperJ.png" alt="" />
-                           <h1 className="text-success mt-4">Trading Platform</h1>
-                    </div>
+        <div data-aos="fade-right" className="col-md-5  m-5 p-5">
+          <img className="img-fluid" src="./swiperG.png" alt="" />
+          <h1 className="text-success mt-4">Keep on Track</h1>
+        </div>
+        <div data-aos="fade-left" className="col-md-5  m-5 p-5">
+          <img className="img-fluid" src="./swiperH.png" alt="" />
+          <h1 className="text-success mt-4">Financial Services</h1>
+        </div>
+        <div data-aos="fade-right" className="col-md-5  m-5 p-5">
+          <img className="img-fluid" src="./swiperI.png" alt="" />
+          <h1 className="text-success mt-4">Real-Time Data</h1>
+        </div>
+        <div data-aos="fade-left" className="col-md-5  m-5 p-5">
+          <img src="./swiperJ.png" alt="" />
+          <h1 className="text-success mt-4">Trading Platform</h1>
+        </div>
+      </div>
+      <div className="container text-center">
+        
+        <div className="row">
+          <div className="col-md-12">
+            
+            <div className="card text-white ">
+              <div className="card-body bg-black p-5">
+                <div>
+                  <h4 className="fw-bold text-success">Contact Us</h4>
+                  <p>
+                    For any inquiries or support, please reach out to us at:
+                  </p>
+                  <p>Email: info@resolute.com</p>
+                  <p>Phone: +1-123-456-7890</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
