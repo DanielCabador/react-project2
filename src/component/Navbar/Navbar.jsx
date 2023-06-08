@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, provider } from "../../Authentication/firebase";
 import { memo } from "react";
@@ -7,19 +7,20 @@ import CountUp from "react-countup";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
-  const [value, setValue] = useState("");
+  const [showMenu, setShowMenu] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
+  const [email, setEmail] = useState("");
+  const location = useLocation();
 
-  const handleShow = () => {
-    setShow(!show);
+  const handleToggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
-  const HandleClick = () => {
+  const handleClick = () => {
     if (signedIn) {
       signOut(auth)
         .then(() => {
-          setValue("");
+          setEmail("");
           localStorage.removeItem("email");
           setSignedIn(false);
         })
@@ -30,7 +31,7 @@ const Navbar = () => {
       signInWithPopup(auth, provider)
         .then((result) => {
           const user = result.user;
-          setValue(user.email);
+          setEmail(user.email);
           localStorage.setItem("email", user.email);
           setSignedIn(true);
         })
@@ -41,92 +42,87 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    setValue(localStorage.getItem("email"));
-    setSignedIn(!!localStorage.getItem("email"));
+    const storedEmail = localStorage.getItem("email");
+    setEmail(storedEmail);
+    setSignedIn(!!storedEmail);
   }, []);
 
   return (
-    <div className="container-fluid navbar-wrapper  p-2">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary ">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            <img
-              src="./Logoooo.png"
-              alt=""
-              style={{ width: "25%", height: "20%" }}
-            />
-          </Link>
-          <button
-            className="navbar-toggler navbar-toggler-x"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <div className="gradient"></div>
-            <button className="button-toggle" onClick={handleShow}>
-              {show ? <span>Close</span> : <span>Menu</span>}
-            </button>
-          </button>
-
-          <div
-            className={`collapse navbar-collapse ${show ? "show" : ""}`}
-            id="navbarText"
-          >
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-              <li className="nav-item">
-                <Link
-                  className="nav-link list-wrapper"
-                  aria-current="page"
-                  to="/"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link list-wrapper" to="/market">
-                  Market
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link list-wrapper" to="/about">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link list-wrapper " to="/contact">
-                  Contact Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link list-wrapper" onClick={HandleClick}>
-                  {signedIn ? "Sign Out" : "Sign In"}
-                </Link>
-              </li>
-            </ul>
-            {value && (
-              <div className="text-center">
-                <div>
-                  <b className="text-success">Signed In as:</b> <br />
-                  <span className="text-light">{value}</span> <br />
-                  <span className="text-light">
-                    Active Users:{" "}
-                    <CountUp
-                      className="text-warning"
-                      start={4}
-                      end={500}
-                      duration={10000}
-                    />
-                  </span>
-                </div>
-              </div>
-            )}
-          </div>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link className="navbar-logo" to="/">
+          <img src="./Logoooo.png" alt="" style={{ width: "25%", height: "20%" }} />
+        </Link>
+        <div
+          className={`menu-icon ${showMenu ? "open" : ""}`}
+          onClick={handleToggleMenu}
+        >
+          <div className="burger"></div>
+          <div className="burger"></div>
+          <div className="burger"></div>
         </div>
-      </nav>
-    </div>
+        <ul className={`nav-menu ${showMenu ? "active" : ""}`}>
+          <li className="nav-item">
+            <Link
+              className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+              to="/"
+            >
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              className={`nav-link ${location.pathname === "/market" ? "active" : ""}`}
+              to="/market"
+            >
+              Market
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}
+              to="/about"
+            >
+              About
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              className={`nav-link ${location.pathname === "/contact" ? "active" : ""}`}
+              to="/contact"
+            >
+              Contact Us
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" onClick={handleClick}>
+              {signedIn ? "Sign Out" : "Sign In"}
+            </Link>
+          </li>
+        </ul>
+        {signedIn && (
+          <div className="login-info">
+            <span className="text-success">Signed in as:</span> <br />
+            <span className="text-light">{email}</span>
+          </div>
+        )}
+        {signedIn && (
+          <div className="counter-wrapper">
+            <div className="counter-card">
+              <span className="text-light">
+                Active Users:{" "}
+                <CountUp
+                  className="text-warning"
+                  start={0}
+                  end={5000}
+                  duration={10000}
+                />
+              </span>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 };
 

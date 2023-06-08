@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="row">
           <div className="col-md-6 contact-column p-3">
             <div className="contact-text-wrapper row">
-              <span className="green-header-text">Our Contacts</span>
+              <h1 className="text-success fw-bold">Our Contacts</h1>
               <span className="white-header-text">Easy to Contact Us</span>
               <span className="white-sub-header-text">
                 Embrace the volatility, seize the opportunities, and let your

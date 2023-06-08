@@ -1,5 +1,10 @@
 import React from "react";
 import "./About.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 
 const About = () => {
   return (
@@ -78,11 +83,30 @@ const About = () => {
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="row">
+                    <div data-aos="fade-right" className="col-md-5  m-5 p-5">
+                      <img className="img-fluid" src="./swiperG.png" alt="" />
+                           <h1 className="text-success mt-4">Keep on Track</h1>
+                    </div>
+                    <div data-aos="fade-left" className="col-md-5  m-5 p-5">
+                      <img className="img-fluid" src="./swiperH.png" alt="" />
+                           <h1 className="text-success mt-4">Financial Services</h1>
+                    </div>
+                    <div data-aos="fade-right" className="col-md-5  m-5 p-5">
+                      <img className="img-fluid" src="./swiperI.png" alt="" />
+                           <h1 className="text-success mt-4">Real-Time Data</h1>
+                    </div>
+                    <div data-aos="fade-left" className="col-md-5  m-5 p-5">
+                      <img src="./swiperJ.png" alt="" />
+                           <h1 className="text-success mt-4">Trading Platform</h1>
+                    </div>
       </div>
     </div>
   );

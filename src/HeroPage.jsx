@@ -78,7 +78,7 @@ const HeroPage = () => {
         <div className="col-md-5">
           <h2 className="text-light ">
             Empower your investments with{" "}
-            <b style={{ color: "green" }}>Resolute</b>.
+            <b style={{ color: "#198754" }}>Resolute</b>.
           </h2>
           <h5 className="text-light">
             Navigate the Stock Market with Confidence.
